@@ -1,0 +1,37 @@
+<div class="bg-white border-right p-3" id="sidebar">
+  <h3 class="text-dark" >
+    Admin pro
+  </h3>
+  <hr class="text-dark">
+
+  <div class="list-group list-reset">
+    <button class="list-group-item list-group-item-action" (click)="toggleMenu()">
+      Personal
+    </button>
+    <ul *ngIf="isMenuOpen">
+      <li class="list-group-item list-group-item-action"
+          (click)="toggleRegistrar()">
+        Registrar
+      </li>
+      <ul *ngIf="isRegistrarOpen">
+        <li class="list-group-item list-group-item-action" 
+            *ngFor="let item of reactiveMenu"
+            [routerLink]="[item.route]"
+            routerLinkActive="active">
+            {{item.title}}
+        </li>
+        
+      </ul>
+    </ul>
+    
+    <ul *ngIf="isMenuOpen">
+      <li class="list-group-item list-group-item-action"
+          (click)="toggleAsignar()">
+        Asignar
+      </li>
+    </ul>
+
+  </div>  
+</div>
+
+
