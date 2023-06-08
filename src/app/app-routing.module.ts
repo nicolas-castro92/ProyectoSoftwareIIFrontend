@@ -12,6 +12,14 @@ const routes: Routes = [
     loadChildren: () => import('./familiar/familiar.module').then( m=>m.FamiliarModule )
   },
   {
+    path:'patient',
+    loadChildren: () => import('./familiar/familiar.module').then( m=>m.FamiliarModule )
+  },
+  {
+    path:'medical-staff',
+    loadChildren: () => import('./familiar/familiar.module').then( m=>m.FamiliarModule )
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
