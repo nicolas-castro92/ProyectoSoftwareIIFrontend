@@ -1,17 +1,23 @@
-<header>
-    <div class="left-section">
-      <div class="logo">
-        <!-- Agrega aquí tu logo -->
-      </div>
-      <div class="search " >
-        
-      </div>
-      <div class="messages">
-        <!-- Agrega aquí el icono de mensajes -->
-      </div>
-      <div class="profile">
-        <!-- Agrega aquí el icono de perfil -->
-      </div>
-    </div>
-  </header>
-  
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar>
+
+      <span>Menú</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+
+      </button>
+    </mat-toolbar>
+  </mat-sidenav>  
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-toolbar>
+
+
+</mat-sidenav-container>
