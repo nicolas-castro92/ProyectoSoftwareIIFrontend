@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './shared/pages/home-page/home-page.component';
+import { PatientModule } from './patient/patient.module';
 
 const routes: Routes = [
   {
@@ -13,11 +14,11 @@ const routes: Routes = [
   },
   {
     path:'patient',
-    loadChildren: () => import('./familiar/familiar.module').then( m=>m.FamiliarModule )
+    loadChildren: () => import('./patient/patient.module').then( m=>m.PatientModule )
   },
   {
     path:'medical-staff',
-    loadChildren: () => import('./familiar/familiar.module').then( m=>m.FamiliarModule )
+    loadChildren: () => import('./medical-staff/medical-staff.module').then( m=>m.MedicalStaffModule )
   },
   {
     path: '',

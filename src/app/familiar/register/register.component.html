@@ -1,1 +1,94 @@
-<p>register works!</p>
+<h1>Agregar Familiar</h1>
+
+<div class="grid">
+    <div class="col-12">
+
+        <form class="grid" [formGroup]="familiarForm" (ngSubmit)="onSubmit()">
+
+                <mat-form-field class="col-12 sm:col-6" >
+                        <mat-label> Name </mat-label>
+                        <input
+                            matInput
+                            type="text"
+                            required
+                            formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6" >
+                    <mat-label> Last Name </mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        required
+                        formControlName="last_name">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6" >
+                    <mat-label> Identification card </mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        required
+                        formControlName="identification_card">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6" >
+                    <mat-label> Age </mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        required
+                        formControlName="age">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6">
+                    <mat-label>Telephone</mat-label>
+                    <span matPrefix>+57 &nbsp;</span>
+                    <input type="tel" 
+                           matInput 
+                           placeholder="880123456"
+                           formControlName="phone">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6" >
+                    <mat-label> Email </mat-label>
+                    <input
+                        matInput
+                        type="email"
+                        required
+                        formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6" >
+                    <mat-label> Address </mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        required
+                        formControlName="address">
+                </mat-form-field>
+
+                <mat-form-field class="col-12 sm:col-6" >
+                    <mat-label> Other phone </mat-label>
+                    <input
+                        matInput
+                        type="text"
+                        required
+                        formControlName="alternate_phone">
+                </mat-form-field>
+        </form>
+
+                <div class="flex justify-content-between " >
+                    <button mat-flat-button
+                            color="primary"
+                            (click)="onSubmit()">
+                        Register
+                    </button>
+                    <button mat-flat-button
+                            color="warn">
+                        Cancel
+                    </button>
+                </div>        
+
+    </div>
+</div>

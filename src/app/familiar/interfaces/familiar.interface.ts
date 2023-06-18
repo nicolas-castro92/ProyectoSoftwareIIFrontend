@@ -22,6 +22,7 @@ export interface CreateFamiliar {
 }
 
 export interface EditFamiliar {
+    id?:                  number;
     name?:                string;
     last_name?:           string;
     identification_card?: string;

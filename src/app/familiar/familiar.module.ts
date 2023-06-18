@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { FamiliarRoutingModule } from './familiar-routing.module';
 import { RegisterComponent } from './register/register.component';
-import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { DeleteComponent } from './delete/delete.component';
+import { MaterialModule } from '../material/material.module';
+import { ListComponent } from './list/list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { DeleteComponent } from './delete/delete.component';
   ],
   imports: [
     CommonModule,
-    FamiliarRoutingModule
+    FamiliarRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class FamiliarModule { }

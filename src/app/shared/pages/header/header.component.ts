@@ -13,9 +13,9 @@ export class HeaderComponent {
   ] */
 
   sidebarItems = [
-    { label: 'Medico', icon: 'label', url: './medical-staff/list' },
+    { label: 'Medico', icon: 'label', url: '/medical-staff/list' },
     { label: 'Paciente', icon: 'label', url: './patient/list' },
-    { label: 'Familiar', icon: 'label', url: './familiar/register' },
+    { label: 'Familiar', icon: 'label', url: './familiar/list' },
   ];
 
   selectedOption: string='';
